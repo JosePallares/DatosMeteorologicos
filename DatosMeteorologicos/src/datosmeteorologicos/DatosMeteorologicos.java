@@ -47,16 +47,15 @@ public class DatosMeteorologicos {
             BufferedReader br = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
             PrintWriter    pw = new PrintWriter(socketCliente.getOutputStream());
             
-            String nombre;
+            String temp_max;
             do {                
-                nombre = br.readLine();
+                temp_max = br.readLine();
 
                 // busco temperatura maxima en la base de datos....
                 Datos buscados = null;
                 for (Datos d : ArrayDatos) {
-                    if(d.temp_max.
-                    if (p.temp_max.equals(temp_max)) {
-                        buscada = p;
+                    if (d.temp_max.equals(temp_max)) {
+                        buscada = d;
                     }
                 }
 
